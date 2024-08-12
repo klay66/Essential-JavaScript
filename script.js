@@ -211,7 +211,7 @@ console.log(getTotelReviewCount(book));
 */
 
 
-
+/*
 const books = getBooks();
 books;
 
@@ -270,4 +270,23 @@ booksAfterDelete;
 const booksAfterUbdate = booksAfterDelete.map((book) =>
   book.id === 1 ? { ...book, bages: 1210 } : book
 )
-booksAfterUbdate
+booksAfterUbdate;
+*/
+// fetch("https://jsonplaceholder.typicode.com/todos")
+//   .then((res) => res.json())
+//   .then(data => console.log(data));
+
+// console.log('nour');
+
+async function getTodos() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await res.json();
+  console.log(data);
+
+  return data;
+}
+
+const todos = getTodos();
+console.log(todos);
+
+console.log("jonas");
